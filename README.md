@@ -1,14 +1,14 @@
-
-RWTH - CONSTRUCTION ROBOTICS - RESEARCH DRIVEN PROJECT - LIMENOS SORTXPERT 
-
+---------------------------------------------------------------------------------------------------------------------------------------
+**RWTH - CONSTRUCTION ROBOTICS - RESEARCH DRIVEN PROJECT - LIMENOS SORTXPERT **
+---------------------------------------------------------------------------------------------------------------------------------------
 
 
 This repository contains the code for a research-driven project related to Construction Robotics. The project is a collaborative effort by Görkem Can Ertemli, Gizem Erekinci Altan, and Georgi Tsakov.
 
 
-
-Inclusions / Libraries
-
+---------------------------------------------------------------------------------------------------------------------------------------
+**Inclusions / Libraries**
+---------------------------------------------------------------------------------------------------------------------------------------
 
 
 This project relies on the following libraries:
@@ -25,7 +25,7 @@ Make sure to install these libraries before running the code through the Arduino
 Additionally, the project uses the NodeMCU / ESP8266 board. If you are using this board, you need to manually add it to the Arduino IDE. For instructions on how to accomplish this, please refer to this short tutorial: [Link to the tutorial](https://randomnerdtutorials.com/how-to-install-esp8266-board-arduino-ide/)
 
 ---------------------------------------------------------------------------------------------------------------------------------------
-Wifi and MQTT Data
+**Wifi and MQTT Data**
 ---------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -39,7 +39,7 @@ MQTT_PORT: (Optional) Set this to the MQTT port number. The default is 1883 and 
 
 
 ---------------------------------------------------------------------------------------------------------------------------------------
-Defs
+**Defs**
 ---------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -57,7 +57,7 @@ OLED_RESET: Reset pin for the OLED display (set to -1 if sharing Arduino reset p
 SCREEN_ADDRESS: Address of the OLED display (0x3C for 128x32, 0x3D for 128x64).
 
 ---------------------------------------------------------------------------------------------------------------------------------------
-Logo Definitions
+**Logo Definitions**
 ---------------------------------------------------------------------------------------------------------------------------------------
 
 
