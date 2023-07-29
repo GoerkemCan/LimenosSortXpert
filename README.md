@@ -105,3 +105,51 @@ This function handles incoming data from the MQTT broker. It takes two parameter
 
 topic: The MQTT topic from which the data is received.
 data: The received data.
+
+
+Setup and Assembly of the Prototype:
+---------------------------------------------------------------------------------------------------------------------------------------
+
+
+The final step in the prototype development involves wiring all the components together to make the system operational with the provided code. The main components include the ESP8266 (NodeMCU) board, the A4988 stepper motor driver, the limit switch, LEDs, and the OLED display. To facilitate assembly, a breadboard is used to house the NodeMCU board, and the other elements are connected to their respective locations.
+
+ESP8266 (NodeMCU) and A4988 Driver:
+Pin D6 on the NodeMCU is connected to the DIR pin on the A4988 driver.
+Pin D5 on the NodeMCU is connected to the STEP pin on the A4988 driver.
+The GND pin of the driver is connected to the GND of the NodeMCU.
+The 5V pin of the driver is connected to the Vin pin of the NodeMCU.
+Caution: Before proceeding, ensure that the power supply is not connected to electricity to avoid any accidents. After this, a 9V power supply is connected to the COM pin, and the GND of the power supply is connected to the GND of the NodeMCU. Care should be taken to prevent the driver from burning, which can happen if the power supply is disconnected abruptly.
+
+Stepper Motor:
+Connect the motor to the A4988 driver using the cable provided with the motor.
+
+Limit Switch:
+The limit switch serves as a homing stop to ensure the system takes the same starting position and maintains a consistent 0 position during every startup.
+Connect the normally open (NO) terminal of the limit switch to pin D7 of the NodeMCU.
+Connect the GND terminal of the limit switch to GND on the NodeMCU.
+
+LEDs:
+Connect three LEDs of different colors to the NodeMCU for visual feedback.
+The yellow LED is connected to pin D0.
+The green LED is connected to pin D3.
+The red LED is connected to pin D4.
+
+OLED Display:
+An I2C device is used for the OLED display for simplicity and reduced wiring.
+Connect the OLED display as follows:
+Connect the Vin pin to 5V.
+Connect GND to GND.
+Connect the SDA pin to D2.
+Connect the SCK pin to D1.
+No additional declaration is needed for the SDA and SCK pins since the Wire library specifies their connections.
+Note: For more information about the declaration for SD1306 displays, please refer to this link: https://randomnerdtutorials.com/guide-for-oled-display-with-arduino/.
+
+Power Supply:
+The prototype can be connected to a power supply using a capacitor or by connecting it to a computer for power supply.
+If using a capacitor, exercise caution to avoid burning the driver when disconnecting the power supply.
+If using the computer for power, disconnect the power supply first and then disconnect from the computer to prevent any damage.
+Once the code is uploaded to the NodeMCU, the prototype is ready for operation. It requires a Wi-Fi connection and an MQTT topic for communication. Users can create these before proceeding and set up a Node-RED UI or other interfaces to test the system. The code itself utilizes MQTT commands in JSON format, with four rotation configurations (L, Z, U, I) and their corresponding values. By creating the necessary MQTT topics and setting up the Wi-Fi connection, users can start the system and observe its automated rebar bending and sorting process.
+
+In conclusion, by carefully wiring all the components together and uploading the code, the prototype is transformed into a functional and automated system for rebar production. It leverages Wi-Fi and MQTT commands to enhance efficiency and minimize human intervention in the construction industry.
+
+For more detailed information about the A4988 driver and how to configure it, please refer to this link: https://lastminuteengineers.com/a4988-stepper-motor-driver-arduino-tutorial/.
