@@ -4,6 +4,11 @@ RWTH - CONSTRUCTION ROBOTICS - RESEARCH DRIVEN PROJECT - LIMENOS SORTXPERT
 
 This repository contains the code for a research-driven project related to Construction Robotics. The project is a collaborative effort by Görkem Can Ertemli, Gizem Erekinci Altan, and Georgi Tsakov.
 
+You can find the demonstartion video of the working prototype through this [link](https://youtu.be/UH-Ukme-pDA)
+
+<figure class="video_container">
+  <iframe src="https://www.youtube.com/embed/UH-Ukme-pDA" frameborder="0" allowfullscreen="true"> </iframe>
+</figure>
 
 Inclusions / Libraries
 ---------------------------------------------------------------------------------------------------------------------------------------
