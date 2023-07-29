@@ -1,4 +1,3 @@
----------------------------------------------------------------------------------------------------------------------------------------
 RWTH - CONSTRUCTION ROBOTICS - RESEARCH DRIVEN PROJECT - LIMENOS SORTXPERT
 ---------------------------------------------------------------------------------------------------------------------------------------
 
@@ -6,7 +5,6 @@ RWTH - CONSTRUCTION ROBOTICS - RESEARCH DRIVEN PROJECT - LIMENOS SORTXPERT
 This repository contains the code for a research-driven project related to Construction Robotics. The project is a collaborative effort by Görkem Can Ertemli, Gizem Erekinci Altan, and Georgi Tsakov.
 
 
----------------------------------------------------------------------------------------------------------------------------------------
 Inclusions / Libraries
 ---------------------------------------------------------------------------------------------------------------------------------------
 
@@ -25,7 +23,7 @@ Make sure to install these libraries before running the code through the Arduino
 
 Additionally, the project uses the NodeMCU / ESP8266 board. If you are using this board, you need to manually add it to the Arduino IDE. For instructions on how to accomplish this, please refer to this short tutorial: [Link to the tutorial](https://randomnerdtutorials.com/how-to-install-esp8266-board-arduino-ide/)
 
----------------------------------------------------------------------------------------------------------------------------------------
+
 Wifi and MQTT Data
 ---------------------------------------------------------------------------------------------------------------------------------------
 
@@ -39,7 +37,6 @@ CLIENT_NAME: Set this to a unique name that identifies your device on the MQTT n
 MQTT_PORT: (Optional) Set this to the MQTT port number. The default is 1883 and can be omitted if you are using the standard port.
 
 
----------------------------------------------------------------------------------------------------------------------------------------
 Defs
 ---------------------------------------------------------------------------------------------------------------------------------------
 
@@ -57,10 +54,54 @@ SCREEN_HEIGHT: Height of the connected OLED display in pixels.\
 OLED_RESET: Reset pin for the OLED display (set to -1 if sharing Arduino reset pin).\
 SCREEN_ADDRESS: Address of the OLED display (0x3C for 128x32, 0x3D for 128x64).
 
----------------------------------------------------------------------------------------------------------------------------------------
 Logo Definitions
 ---------------------------------------------------------------------------------------------------------------------------------------
 
 
 The code includes bitmap definitions for our logo and its animation on the OLED display. The logo is defined as arrays of hexadecimal values representing the pixels of the images.
 
+
+Functions
+---------------------------------------------------------------------------------------------------------------------------------------
+
+Function: void setup()
+
+Definition:
+This function is called once when the microcontroller (NodeMCU/ESP8266) starts up. It is used to initialize various settings and configurations for the project.
+
+Function: void loop()
+
+Definition:
+This function is the main program loop that runs continuously after the setup() function has executed. It contains the core logic of the project and handles the real-time operation of the system.
+
+Function: void moveStepperMotor(int steps, bool direction)
+
+Definition:
+This function is responsible for controlling the stepper motor's movement. It takes two parameters:
+
+steps: The number of steps the motor should move.
+direction: A boolean value indicating the direction of the motor (true for forward, false for backward).
+Function: void checkLimitSwitch()
+
+Definition:
+This function checks the status of the limit switch. When the limit switch is triggered, it indicates that the motor has reached its physical limit, and this function takes appropriate actions based on the project's requirements.
+
+Function: void displayLogoAnimation()
+
+Definition:
+This function displays an animation on the OLED display using the defined bitmap logos. It creates a visual representation of the project's identity or status.
+
+Function: void sendDataToMQTTBroker(String topic, String data)
+
+Definition:
+This function is responsible for sending data to the MQTT broker. It takes two parameters:
+
+topic: The MQTT topic to which the data should be published.
+data: The actual data to be sent.
+Function: void receiveDataFromMQTTBroker(String topic, String data)
+
+Definition:
+This function handles incoming data from the MQTT broker. It takes two parameters:
+
+topic: The MQTT topic from which the data is received.
+data: The received data.
