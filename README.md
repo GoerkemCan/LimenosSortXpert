@@ -111,7 +111,7 @@ Setup and Assembly of the Prototype:
 ---------------------------------------------------------------------------------------------------------------------------------------
 
 
-The final step in the prototype development involves wiring all the components together to make the system operational with the provided code. The main components include the ESP8266 (NodeMCU) board, the A4988 stepper motor driver, the limit switch, LEDs, and the OLED display. To facilitate assembly, a breadboard is used to house the NodeMCU board, and the other elements are connected to their respective locations.
+This step in the prototype development involves wiring all the components together to make the system operational with the provided code. The main components include the ESP8266 (NodeMCU) board, the A4988 stepper motor driver, the limit switch, LEDs, and the OLED display. To facilitate assembly, a breadboard is used to house the NodeMCU board, and the other elements are connected to their respective locations.
 
 ESP8266 (NodeMCU) and A4988 Driver:\
 Pin D6 on the NodeMCU is connected to the DIR pin on the A4988 driver.\
