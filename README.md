@@ -1,92 +1,65 @@
-# Limenos SortXpert
+---------------------------------------------------------------------------------------------------------------------------------------
+RWTH - CONSTRUCTION ROBOTICS - RESEARCH DRIVEN PROJECT - LIMENOS SORTXPERT 
+---------------------------------------------------------------------------------------------------------------------------------------
 
 
+This repository contains the code for a research-driven project related to Construction Robotics. The project is a collaborative effort by Görkem Can Ertemli, Gizem Erekinci Altan, and Georgi Tsakov.
 
-## Getting started
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+---------------------------------------------------------------------------------------------------------------------------------------
+Inclusions / Libraries
+---------------------------------------------------------------------------------------------------------------------------------------
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
 
-## Add your files
+This project relies on the following libraries:
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+AccelStepper: Library for controlling stepper motors.
+ArduinoJson: Library for handling JSON data.
+EspMQTTClient: Library for MQTT communication with an ESP8266-based device.
+SPI: Arduino SPI library.
+Wire: Arduino I2C library.
+Adafruit_GFX: Graphics library for Adafruit displays.
+Adafruit_SSD1306: Library for controlling SSD1306 OLED displays.
+Make sure to install these libraries before running the code through the ArduinoIDE
 
-```
-cd existing_repo
-git remote add origin https://git.rwth-aachen.de/gorkemcanertemli/limenos-sortxpert.git
-git branch -M main
-git push -uf origin main
-```
+Additionally, the project uses the NodeMCU / ESP8266 board. If you are using this board, you need to manually add it to the Arduino IDE. For instructions on how to accomplish this, please refer to this short tutorial: [Link to the tutorial](https://randomnerdtutorials.com/how-to-install-esp8266-board-arduino-ide/)
 
-## Integrate with your tools
+---------------------------------------------------------------------------------------------------------------------------------------
+Wifi and MQTT Data
+---------------------------------------------------------------------------------------------------------------------------------------
 
-- [ ] [Set up project integrations](https://git.rwth-aachen.de/gorkemcanertemli/limenos-sortxpert/-/settings/integrations)
 
-## Collaborate with your team
+Before uploading the code to your device, update the following variables in the code to match your Wifi and MQTT setup:
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Automatically merge when pipeline succeeds](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+WIFI_NAME: Set this to your Wifi name (SSID).
+WIFI_PASSWORD: Set this to your Wifi password.
+MQTT_BROKER: Set this to the IP address or hostname of your MQTT broker server.
+CLIENT_NAME: Set this to a unique name that identifies your device on the MQTT network.
+MQTT_PORT: (Optional) Set this to the MQTT port number. The default is 1883 and can be omitted if you are using the standard port.
 
-## Test and Deploy
 
-Use the built-in continuous integration in GitLab.
+---------------------------------------------------------------------------------------------------------------------------------------
+Defs
+---------------------------------------------------------------------------------------------------------------------------------------
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
 
-***
+This section contains various pin definitions used in the project:
 
-# Editing this README
+DIR_PIN: Pin for controlling the direction of the stepper motor.
+STEP_PIN: Pin for sending step signals to the stepper motor.
+SWITCH_PIN: Pin for the limit switch.
+YLED_PIN: Pin for the yellow LED.
+GLED_PIN: Pin for the green LED.
+RLED_PIN: Pin for the red LED.
+SCREEN_WIDTH: Width of the connected OLED display in pixels.
+SCREEN_HEIGHT: Height of the connected OLED display in pixels.
+OLED_RESET: Reset pin for the OLED display (set to -1 if sharing Arduino reset pin).
+SCREEN_ADDRESS: Address of the OLED display (0x3C for 128x32, 0x3D for 128x64).
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
+---------------------------------------------------------------------------------------------------------------------------------------
+Logo Definitions
+---------------------------------------------------------------------------------------------------------------------------------------
 
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
 
-## Name
-Choose a self-explaining name for your project.
+The code includes bitmap definitions for our logo and its animation on the OLED display. The logo is defined as arrays of hexadecimal values representing the pixels of the images.
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
