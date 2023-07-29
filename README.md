@@ -1,14 +1,14 @@
----------------------------------------------------------------------------------------------------------------------------------------
+
 RWTH - CONSTRUCTION ROBOTICS - RESEARCH DRIVEN PROJECT - LIMENOS SORTXPERT 
----------------------------------------------------------------------------------------------------------------------------------------
+
 
 
 This repository contains the code for a research-driven project related to Construction Robotics. The project is a collaborative effort by Görkem Can Ertemli, Gizem Erekinci Altan, and Georgi Tsakov.
 
 
----------------------------------------------------------------------------------------------------------------------------------------
+
 Inclusions / Libraries
----------------------------------------------------------------------------------------------------------------------------------------
+
 
 
 This project relies on the following libraries:
