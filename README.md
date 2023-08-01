@@ -13,13 +13,14 @@ Inclusions / Libraries
 
 This project relies on the following libraries:
 
-AccelStepper: Library for controlling stepper motors. \
-ArduinoJson: Library for handling JSON data.\
-EspMQTTClient: Library for MQTT communication with an ESP8266-based device.\
-SPI: Arduino SPI library.\
-Wire: Arduino I2C library.\
-Adafruit_GFX: Graphics library for Adafruit displays.\
-Adafruit_SSD1306: Library for controlling SSD1306 OLED displays.
+•AccelStepper: This library enables precise control of the bipolar stepper motor, facilitating smooth and accurate movements during the rebar sorting process./
+•ArduinoJson: Used for handling JSON data, this library is essential for efficiently processing and parsing data related to Wi-Fi and MQTT communication./
+•EspMQTTClient: With this library, the NodeMCU board can establish a Wi-Fi connection and communicate through MQTT, ensuring seamless data exchange between devices./
+•SPI: A fundamental library for handling SPI communication, used to interface with the oLED display./
+•Wire: This library supports I2C communication, crucial for interfacing with components such as the oLED display./
+•Adafruit_GFX: The library provides graphics functions for the oLED display, allowing for straightforward rendering of visual elements./
+•Adafruit_SSD1306: Specifically tailored for SSD1306-based oLED displays, this library ensures effortless integration and interaction with the display.
+
 
 Make sure to install these libraries before running the code through the ArduinoIDE
 
